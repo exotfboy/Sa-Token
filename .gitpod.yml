@@ -1,0 +1,4 @@
+ports:
+  - name: OAuthServer
+    port: 8081
+    visibility: public
