@@ -3,7 +3,7 @@ tasks:
     init: |
       docker-compose pull
     command: |
-      docker compose -d && cd sa-token-demo/sa-token-demo-oauth-server && mvn spring-boot:run
+      docker compose up -d && cd sa-token-demo/sa-token-demo-oauth2-server && mvn spring-boot:run
     env:
       TAG: prerelease
 

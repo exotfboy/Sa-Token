@@ -18,12 +18,14 @@
 			密码：<input name="pwd" type="password" /> <br>
 			<button onclick="doLogin()">登录</button>
 			<span style="color: #666;">（测试账号： sa 123456）</span>
+
+			<a href="" id="t-github">使用github登录</a>
 		</div>
 		<script src="https://unpkg.zhimg.com/jquery@3.4.1/dist/jquery.min.js"></script>
 		<script src="https://www.layuicdn.com/layer-v3.1.1/layer.js"></script>
 		<script>window.jQuery || alert('当前页面CDN服务商已宕机，请将所有js包更换为本地依赖')</script>
 		<script type="text/javascript">
-			
+			$("#t-github").attr("href","https://github.com/login/oauth/authorize?client_id=e583e02ff30e6d310f11&redirect_uri="+encodeURIComponent(location.protocol+"://"+location.host+"/oauth/callback"));
 			// 登录方法 
 			function doLogin() {
 				console.log('-----------');
