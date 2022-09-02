@@ -1,3 +1,13 @@
+tasks:
+  - name: Start Logto
+    init: |
+      docker-compose pull
+    command: |
+      docker compose -d && cd sa-token-demo/sa-token-demo-oauth-server && mvn spring-boot:run
+    env:
+      TAG: prerelease
+
+
 ports:
   - name: OAuthServer
     port: 8081
